@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Inicio | APNABI Autismo Bizkaia</title>
+    <!-- Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para los iconos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        apnabi: {
+                            blue: '#0099D2',
+                            pink: '#CD007E',
+                            orange: '#f4a22e',
+                            purple: '#A44291',
+                            green: '#94C123',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F8FAFC; /* Fondo gris muy claro y limpio */
+        }
+        .card-corporate {
+            transition: all 0.2s ease-in-out;
+        }
+        .card-corporate:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -8px rgba(0, 75, 135, 0.15);
+        }
+        /* Ocultar scrollbar en el embed de redes para mantener limpieza */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans text-gray-800">
+
+    <!-- Header Corporativo -->
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Logo desde archivo local -->
+            <div class="flex items-center">
+                <!-- Asegúrate de colocar el archivo 'logo.png' en la misma carpeta que este HTML -->
+                <img src="logo.png" alt="APNABI Autismo Bizkaia Logo" class="h-12 md:h-16 object-contain">
+            </div>
+            
+            <!-- Fecha Bilingüe -->
+            <div class="flex items-center text-sm text-gray-600 bg-gray-50 border border-gray-200 px-4 py-2 rounded-md">
+                <i data-lucide="calendar" class="w-4 h-4 mr-3 text-apnabi-orange"></i>
+                <span id="current-date" class="flex items-center gap-2"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        
+        <!-- Títulos de Bienvenida Bilingües -->
+        <div class="mb-10 text-center md:text-left border-l-4 border-apnabi-pink pl-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-apnabi-blue mb-1">Ongi etorri APNABIko Aplikazioen eta interesguneen atarira</h2>
+            <h3 class="text-xl md:text-2xl text-gray-500 mb-4">Bienvenido al portal de Aplicaciones y sitios de interés de APNABI</h3>
+            
+            <p class="text-gray-800 font-medium">Aukeratu behar duzun plataforma zure lanaldiarekin jarraitzeko.</p>
+            <p class="text-gray-600">Selecciona la plataforma a la que necesitas acceder para continuar con tu jornada.</p>
+        </div>
+
+        <!-- Grid de Enlaces Corporativos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            
+            <!-- Tarjeta 1: Berrikuntza Txokoa -->
+            <a href="https://sites.google.com/apnabi.org/berrikuntzatxokoa2026/p%C3%A1gina-principal?read_current=1" target="_blank" class="card-corporate bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-apnabi-orange shadow-sm flex flex-col h-full group">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-orange-50 text-apnabi-orange rounded-md flex items-center justify-center group-hover:bg-apnabi-orange group-hover:text-white transition-colors">
+                        <i data-lucide="lightbulb" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 leading-tight">Berrikuntza Txokoa 2026</h3>
+                </div>
+                <div class="flex-grow space-y-3 mb-6">
+                    <p class="text-sm font-semibold text-gray-800">Berrikuntzarako eta etengabeko hobekuntzarako espazioa. Proiektuak eta metodologia berriak.</p>
+                    <p class="text-sm text-gray-600">Espacio de innovación y mejora continua. Proyectos, ideas y nuevas metodologías.</p>
+                </div>
+                <div class="mt-auto flex items-center justify-between text-apnabi-orange font-bold text-sm uppercase">
+                    <span>Sartu / Acceder</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+            <!-- Tarjeta 2: Profesionalak -->
+            <a href="https://profesionalak.apnabi.org/" target="_blank" class="card-corporate bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-apnabi-blue shadow-sm flex flex-col h-full group">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-blue-50 text-apnabi-blue rounded-md flex items-center justify-center group-hover:bg-apnabi-blue group-hover:text-white transition-colors">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Profesionalak</h3>
+                </div>
+                <div class="flex-grow space-y-3 mb-6">
+                    <p class="text-sm font-semibold text-gray-800">APNABIren langilearen ataria. Nominak, txandak, oporrak eta barne-baliabideak.</p>
+                    <p class="text-sm text-gray-600">Portal del empleado de APNABI. Acceso a nóminas, gestión de turnos, vacaciones y recursos internos.</p>
+                </div>
+                <div class="mt-auto flex items-center justify-between text-apnabi-blue font-bold text-sm uppercase">
+                    <span>Sartu / Acceder</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+            <!-- Tarjeta 3: Web Principal -->
+            <a href="https://www.apnabi.eus/" target="_blank" class="card-corporate bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-apnabi-green shadow-sm flex flex-col h-full group">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-lime-50 text-apnabi-green rounded-md flex items-center justify-center group-hover:bg-apnabi-green group-hover:text-white transition-colors">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Web APNABI.eus</h3>
+                </div>
+                <div class="flex-grow space-y-3 mb-6">
+                    <p class="text-sm font-semibold text-gray-800">Kanpoko webgune korporatiboa. Albiste publikoak, zerbitzuak eta informazio orokorra.</p>
+                    <p class="text-sm text-gray-600">Página corporativa externa. Noticias públicas, servicios, información general y contacto.</p>
+                </div>
+                <div class="mt-auto flex items-center justify-between text-apnabi-green font-bold text-sm uppercase">
+                    <span>Sartu / Acceder</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+            <!-- Tarjeta 4: Sinergia APNABI -->
+            <a href="https://apnabi.sinergiacrm.org/index.php?action=Login&module=Users" target="_blank" class="card-corporate bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-apnabi-purple shadow-sm flex flex-col h-full group">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 bg-fuchsia-50 text-apnabi-purple rounded-md flex items-center justify-center group-hover:bg-apnabi-purple group-hover:text-white transition-colors">
+                        <i data-lucide="database" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Sinergia APNABI</h3>
+                </div>
+                <div class="flex-grow space-y-3 mb-6">
+                    <p class="text-sm font-semibold text-gray-800">Kudeaketa-plataforma zentrala. Erabiltzaileen datu-basea, jarraipenak eta administrazioa.</p>
+                    <p class="text-sm text-gray-600">Plataforma de gestión central. Base de datos de usuarios, seguimientos, familias y administración.</p>
+                </div>
+                <div class="mt-auto flex items-center justify-between text-apnabi-purple font-bold text-sm uppercase">
+                    <span>Sartu / Acceder</span>
+                    <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Sección Social y Actualidad Bilingüe -->
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-apnabi-blue flex items-center gap-2">
+                    <i data-lucide="rss" class="w-5 h-5 text-apnabi-pink"></i>
+                    Gaurkotasuna eta Sare Sozialak <span class="text-gray-400 font-normal mx-1">|</span> <span class="text-gray-700">Actualidad y Redes Sociales</span>
+                </h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                
+                <!-- X (Twitter) -->
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2 text-gray-900">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                            </svg>
+                            <span class="font-bold">@Apnabi</span>
+                        </div>
+                    </div>
+                    <div class="h-[250px] overflow-y-auto no-scrollbar rounded border border-gray-100 bg-white">
+                        <a class="twitter-timeline" data-height="250" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/Apnabi?ref_src=twsrc%5Etfw">Tweets by Apnabi</a> 
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="p-6 flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 text-[#0A66C2]">
+                        <i data-lucide="linkedin" class="w-5 h-5 fill-current"></i>
+                        <span class="font-bold text-gray-900">LinkedIn APNABI</span>
+                    </div>
+                    <div class="flex-grow flex flex-col justify-center items-center bg-gray-50 rounded border border-gray-100 p-6 text-center">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Jarraitu gure jarduera profesionala eta instituzionala.</p>
+                        <p class="text-sm text-gray-600 mb-6">Mantente al día con nuestra actividad profesional y red de contactos.</p>
+                        
+                        <a href="https://www.linkedin.com/company/apnabi-autismo-bizkaia" target="_blank" class="w-full py-2 bg-white border border-[#0A66C2] text-[#0A66C2] text-sm font-bold uppercase rounded hover:bg-[#0A66C2] hover:text-white transition-colors">
+                            Ikusi profila / Ver perfil
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Instagram -->
+                <div class="p-6 flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 text-[#E1306C]">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                        <span class="font-bold text-gray-900">Instagram @apnabi_autismo</span>
+                    </div>
+                    <div class="flex-grow flex flex-col justify-center items-center bg-gray-50 rounded border border-gray-100 p-6 text-center">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Ezagutu gure jardueren eta zentroen egunerokoa.</p>
+                        <p class="text-sm text-gray-600 mb-6">Descubre el día a día de nuestras actividades y centros.</p>
+                        
+                        <a href="https://www.instagram.com/apnabi_autismo/" target="_blank" class="w-full py-2 bg-white border border-[#E1306C] text-[#E1306C] text-sm font-bold uppercase rounded hover:bg-[#E1306C] hover:text-white transition-colors">
+                            Joan Instagramera / Ir a IG
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Bilingüe -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-gray-500 text-center md:text-left">
+                &copy; <span id="year"></span> APNABI Autismo Bizkaia.<br class="block md:hidden"> 
+                <span class="font-medium text-gray-700">Barne-sarbide ataria</span> / Portal de acceso interno.
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm text-gray-600 font-medium">
+                <a href="#" class="hover:text-apnabi-blue transition-colors">Euskarri Informatikoa / Soporte</a>
+                <span class="hidden md:inline text-gray-300">|</span>
+                <a href="https://www.apnabi.eus/contacto/" target="_blank" class="hover:text-apnabi-blue transition-colors">Kontaktua / Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts funcionales -->
+    <script>
+        // Inicializar Iconos
+        lucide.createIcons();
+
+        // Mostrar Fecha Bilingüe (Construcción manual robusta)
+        const dateElement = document.getElementById('current-date');
+        const today = new Date();
+        
+        // --- Euskera Date (Generado manualmente para evitar fallos del navegador) ---
+        const euMonths = ["urtarrilak", "otsailak", "martxoak", "apirilak", "maiatzak", "ekainak", "uztailak", "abuztuak", "irailak", "urriak", "azaroak", "abenduak"];
+        const year = today.getFullYear();
+        const euMonth = euMonths[today.getMonth()];
+        const day = today.getDate();
+        let euDate = `${year}ko ${euMonth} ${day}`; // Formato: 2024ko maiatzak 1
+
+        // --- Castellano Date ---
+        const optionsES = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        let esDate = today.toLocaleDateString('es-ES', optionsES);
+        esDate = esDate.charAt(0).toUpperCase() + esDate.slice(1); // Primera letra en mayúscula
+
+        dateElement.innerHTML = `<span class="font-bold text-apnabi-blue whitespace-nowrap">${euDate}</span> <span class="text-gray-300 mx-1">|</span> <span class="whitespace-nowrap">${esDate}</span>`;
+
+        // Año actual en el footer
+        document.getElementById('year').textContent = year;
+    </script>
+</body>
+</html>
