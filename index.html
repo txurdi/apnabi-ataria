@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Inicio | APNABI Autismo Bizkaia</title>
+
+    <!-- Google tag (gtag.js) de Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPNFVS1YV1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-CPNFVS1YV1');
+    </script>
+
     <!-- Tailwind CSS para el diseño -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons para los iconos -->
@@ -88,7 +99,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             
             <!-- Tarjeta 1: Berrikuntza Txokoa -->
-            <a href="https://sites.google.com/apnabi.org/berrikuntzatxokoa2026/p%C3%A1gina-principal?read_current=1" target="_blank" class="card-corporate bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-apnabi-orange shadow-sm flex flex-col h-full group">
+            <a href="https://sites.google.com/apnabi.org/berrikuntzatxokoa2026/p%C3%A1gina-principal" target="_blank" class="card-corporate bg-white rounded-lg p-6 border border-gray-200 border-t-4 border-t-apnabi-orange shadow-sm flex flex-col h-full group">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-10 h-10 bg-orange-50 text-apnabi-orange rounded-md flex items-center justify-center group-hover:bg-apnabi-orange group-hover:text-white transition-colors">
                         <i data-lucide="lightbulb" class="w-5 h-5"></i>
@@ -161,6 +172,32 @@
 
         </div>
 
+        <!-- Banner: Guía para Profesionales -->
+        <div class="mb-16">
+            <a href="https://drive.google.com/file/d/12lzdU35WX4QNal3Yjblr0-8DeA64aWgb/view?usp=sharing" target="_blank" class="card-corporate flex flex-col md:flex-row items-center justify-between gap-6 bg-apnabi-blue rounded-lg p-6 md:p-8 shadow-sm group text-white relative overflow-hidden">
+                <!-- Efecto visual de fondo -->
+                <div class="absolute right-0 top-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20 transition-transform group-hover:scale-110"></div>
+                
+                <div class="flex items-center gap-5 z-10 w-full md:w-auto">
+                    <div class="w-14 h-14 shrink-0 bg-white/20 rounded-lg flex items-center justify-center border border-white/20">
+                        <i data-lucide="book-open" class="w-7 h-7 text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold mb-1">Profesionalentzako Gida</h3>
+                        <h4 class="text-lg text-blue-100 font-medium mb-2">Guía para profesionales de APNABI</h4>
+                        <p class="text-sm text-blue-50">Erakundearen barne-informazioa eta oinarrizko jarraibideak. / Información interna y pautas básicas de la entidad.</p>
+                    </div>
+                </div>
+                
+                <div class="z-10 shrink-0 w-full md:w-auto">
+                    <div class="flex items-center justify-center px-6 py-3 bg-white text-apnabi-blue font-bold text-sm uppercase rounded shadow-sm transition-all group-hover:bg-gray-50">
+                        <span>Ikusi Gida / Ver Guía</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
         <!-- Sección Social y Actualidad Bilingüe -->
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
             <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
@@ -172,19 +209,19 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
                 
-                <!-- X (Twitter) -->
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center gap-2 text-gray-900">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                            </svg>
-                            <span class="font-bold">@Apnabi</span>
-                        </div>
+                <!-- Facebook -->
+                <div class="p-6 flex flex-col">
+                    <div class="flex items-center gap-2 mb-4 text-[#1877F2]">
+                        <i data-lucide="facebook" class="w-5 h-5 fill-current"></i>
+                        <span class="font-bold text-gray-900">Facebook APNABI</span>
                     </div>
-                    <div class="h-[250px] overflow-y-auto no-scrollbar rounded border border-gray-100 bg-white">
-                        <a class="twitter-timeline" data-height="250" data-theme="light" data-chrome="noheader nofooter noborders transparent" href="https://twitter.com/Apnabi?ref_src=twsrc%5Etfw">Tweets by Apnabi</a> 
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div class="flex-grow flex flex-col justify-center items-center bg-gray-50 rounded border border-gray-100 p-6 text-center">
+                        <p class="text-sm font-semibold text-gray-800 mb-1">Ezagutu gure komunitatea eta partekatu berriak.</p>
+                        <p class="text-sm text-gray-600 mb-6">Únete a nuestra comunidad y sigue todas nuestras novedades.</p>
+                        
+                        <a href="https://www.facebook.com/apnabi.autismo.bizkaia/" target="_blank" class="w-full py-2 bg-white border border-[#1877F2] text-[#1877F2] text-sm font-bold uppercase rounded hover:bg-[#1877F2] hover:text-white transition-colors">
+                            Joan Facebookera / Ir a FB
+                        </a>
                     </div>
                 </div>
 
@@ -233,9 +270,10 @@
                 <span class="font-medium text-gray-700">Barne-sarbide ataria</span> / Portal de acceso interno.
             </p>
             <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-sm text-gray-600 font-medium">
-                <a href="#" class="hover:text-apnabi-blue transition-colors">Euskarri Informatikoa / Soporte</a>
-                <span class="hidden md:inline text-gray-300">|</span>
-                <a href="https://www.apnabi.eus/contacto/" target="_blank" class="hover:text-apnabi-blue transition-colors">Kontaktua / Contacto</a>
+                <a href="mailto:berrikuntza@apnabi.eus" class="hover:text-apnabi-blue transition-colors flex items-center gap-1.5">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    Kontaktua / Soporte
+                </a>
             </div>
         </div>
     </footer>
